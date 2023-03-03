@@ -1,0 +1,236 @@
+ /*--------------------- global component --------------------- */
+ *{font-family:'Cairo', sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style: none;
+    ;}
+    :root{
+        --main-color:#ededed;
+        --sec-color:#ff4da6;
+    }
+    .container{
+    padding: 0px 15px;
+    margin: 0px auto;
+    }
+    @media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+    }
+    /* Medium */
+    @media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+    }
+    /* Large */
+    @media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+    }
+  
+  
+  
+.landing{
+    background-image: url(/img/resturant.jfif);
+    background-size: cover;
+    height: 100vh;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: .6;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+
+}
+header img{
+    max-width: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+nav{
+    background-color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+nav ul{
+    display: flex;
+
+    justify-content: center; 
+    align-items: center;
+    gap: 20px;
+
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: .5s;
+    position: relative;
+}
+nav a:hover{
+    color: var(--sec-color);
+}
+nav a::before{
+    content: "";
+    height: 2px;
+    width: 0px;
+    background-color: var(--sec-color);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: .5s;
+}
+nav a:hover::before{
+    width: 100%;
+}
+
+.landing h1{
+    font-family: 'Great Vibes', cursive;
+    font-size: 80px;
+    text-align: center;
+
+        font-size: 80px;
+        color: #fff;
+        text-align: center;
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+
+}
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+        }
+        to {
+          text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+        }
+      }
+            
+.discount{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image: url(/img/discount.jpg);
+    position: relative;
+}
+.discount .overlay{
+    opacity: .8;
+}
+.discount .container{
+    padding-block: 50px;
+    color: white;
+    position: relative;}
+.discount h2{
+    font-size: 40px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+.discount p {
+    font-size: 20px;
+
+}
+.bottom-area{
+    background: #ededed;
+}
+.bottom-area .container{
+    display: flex;
+    gap: 30px;
+    padding-block: 80px;
+    align-items: flex-end;
+    height: 650px;
+}
+.card{
+    padding: 30px 30px;
+    box-shadow: 0 8px 32px 0 rgba(255,255,255,.37);
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+}
+.card.second{
+    align-self: flex-start;
+}
+.card h2{
+    color: var(--sec-color);
+    font-size: 30px;
+    position: relative;
+    width: fit-content;
+    margin:  auto;
+}
+.card p{
+    line-height: 1.8;
+    margin-top: 20px;
+    color: black;
+    font-size: 18px;
+}
+.card h2::after{
+    height: 5px;
+    content: "";
+    width: 80%;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-color: var(--sec-color);
+
+}
+.card .read-more{
+    display: flex;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding: 20px 10px 0px;
+    color: var(--main-color);
+    font-weight: bold;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.card .read-more a{
+    color: var(--sec-color);
+}
+.card svg{
+    color: var(--sec-color);}
+    .card:hover svg{
+
+    
+    animation-name: arrow-motion;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;animation-timing-function: linear;
+}
+@keyframes arrow-motion {100%{transform: translateX(10px);}}
+
+footer .logo img{
+    width: 240px;
+}
+footer .container {
+    display: flex;
+    padding-block: 0px;
+    background-color: black;
+    bottom: 0px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 100px;
+    align-items: center;
+}
+footer .copyright{
+    font-size: 25px;
+    color: var(--sec-color);}
